@@ -1,0 +1,89 @@
+# depslib dependency file v1.0
+1737449365 source:z:\but-1\c++\init2\s102\src\image.cpp
+	<SDL_image.h>
+	<exception>
+	"Image.h"
+
+1733815053 source:z:\but-1\c++\init2\s102\src\moteur.cpp
+	<SDL_image.h>
+	"Moteur.h"
+
+1737449365 source:z:\but-1\c++\init2\s102\src\main.cpp
+	<vector>
+	"Dictionnaire.h"
+	"Moteur.h"
+	"Image.h"
+	"Personnage.h"
+	"Objet.h"
+	"Niveau.h"
+
+1737449365 source:z:\but-1\c++\init2\s102\src\personnage.cpp
+	"Image.h"
+	"Personnage.h"
+	<string>
+	"Moteur.h"
+
+1733225431 source:c:\users\rstinus\downloads\s102\src\image.cpp
+	<SDL_image.h>
+	<exception>
+	"Image.h"
+
+1733238376 source:c:\users\rstinus\downloads\s102\src\main.cpp
+	<vector>
+	"Moteur.h"
+	"Image.h"
+	"Personnage.h"
+
+1733225431 source:c:\users\rstinus\downloads\s102\src\moteur.cpp
+	<SDL_image.h>
+	"Moteur.h"
+
+1733236994 source:c:\users\rstinus\downloads\s102\src\personnage.cpp
+	"Image.h"
+	"Personnage.h"
+	<string>
+
+1734425008 source:z:\but-1\c++\init2\s102\src\maintest.cpp
+	<vector>
+	<iostream>
+	"Moteur.h"
+	"Image.h"
+	"Personnage.h"
+	"Tuile.h"
+	"Dictionnaire.h"
+
+1737449365 source:z:\but-1\c++\init2\s102\src\tuile.cpp
+	"Image.h"
+	<string>
+	"Moteur.h"
+	"Tuile.h"
+	<vector>
+
+1737449365 source:z:\but-1\c++\init2\s102\src\dictionnaire.cpp
+	"Image.h"
+	<string>
+	"Moteur.h"
+	"Dictionnaire.h"
+	<vector>
+	<iostream>
+
+1737449365 source:z:\but-1\c++\init2\s102\src\niveau.cpp
+	"Image.h"
+	<string>
+	"Moteur.h"
+	"Dictionnaire.h"
+	<vector>
+	<iostream>
+	"Objet.h"
+	"Niveau.h"
+
+1737449365 source:z:\but-1\c++\init2\s102\src\objet.cpp
+	"Image.h"
+	<string>
+	"Moteur.h"
+	"Dictionnaire.h"
+	<vector>
+	<iostream>
+	"Tuile.h"
+	"Objet.h"
+
