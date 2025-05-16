@@ -7,7 +7,8 @@
 using namespace std;
 
 // Constructeur
-Dictionnaire::Dictionnaire(string nom) {
+Dictionnaire::Dictionnaire() {
+    string nom = "./assets/dictionnaire.txt";
     ifstream entree;
     entree.open(nom);
     if (!(entree.is_open())) {

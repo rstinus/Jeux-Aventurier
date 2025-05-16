@@ -43,7 +43,7 @@ int main(int, char**) // Version special du main, ne pas modifier
     Personnage Guerrier(skin,32,16,skin_x*16,skin_y*16,'H');
     Personnage ennemi1(skin,5*16,16,ennemi1skin_x*16,ennemi1skin_y*16,'B');
     Personnage ennemi2(skin,16,5*16,ennemi2skin_x*16,ennemi2skin_y*16,'D');
-    Dictionnaire dico("./assets/dictionnaire.txt");
+    Dictionnaire dico();
     Niveau Niveau1(objet, "./assets/niveau1.txt", dico);
 
     bool quitter = false;

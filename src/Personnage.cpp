@@ -64,6 +64,7 @@ void Personnage::allerDroite(Niveau& niveau){
     if ((niveau.caseEtLibre(_PersPosx, _PersPosy) == false)){
         _PersPosx -= 16;
     }
+    niveauSuivant(niveau);
 }
 
 // Faire aller à gauche le personnage
@@ -72,6 +73,7 @@ void Personnage::allerGauche(Niveau& niveau){
     if (niveau.caseEtLibre(_PersPosx, _PersPosy) == false){
         _PersPosx += 16;
     }
+    niveauSuivant(niveau);
 }
 
 // Faire aller en bas le personnage
@@ -80,6 +82,7 @@ void Personnage::allerBas(Niveau& niveau){
     if (niveau.caseEtLibre(_PersPosx, _PersPosy) == false){
         _PersPosy -= 16;
     }
+    niveauSuivant(niveau);
 }
 
 // Faire aller en haut le personnage
@@ -88,6 +91,7 @@ void Personnage::allerHaut(Niveau& niveau){
     if (niveau.caseEtLibre(_PersPosx, _PersPosy) == false){
         _PersPosy += 16;
     }
+    niveauSuivant(niveau);
 }
 
 // Mettre à jour la direction
@@ -207,6 +211,10 @@ void Personnage::mettreAjourAnimation() {
 
 void Personnage::niveauSuivant(Niveau& niveau) {
     if (_PersPosx == 112 && _PersPosy == 16 && niveau.getBonus() == 0) {
-        niveau.setnomf()
+        switch (niveau.getNiveauCurent()) {
+    case 1:
+        niveau.setNiveau("./assets/niveau2.txt",dico);
+        }
+
     }
 }

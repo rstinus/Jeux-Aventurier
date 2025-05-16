@@ -12,7 +12,7 @@ class Dictionnaire {
     vector<Tuile> _LesTuiles;
 public:
 
-    Dictionnaire(string nom);
+    Dictionnaire();
 
     void afficher() const ;
 

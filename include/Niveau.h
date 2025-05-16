@@ -12,7 +12,10 @@ using namespace std;
 class Niveau {
     vector<Objet> _decor;
     int _bonus;
-    string nomFichier;
+    int _niveauCurent;
+    string _nomFichier;
+    Image _image;
+    Dictionnaire _dico;
 public :
     Niveau(Image& image, string nomf, Dictionnaire& dico);
 
@@ -30,7 +33,9 @@ public :
 
     int getBonus();
 
-    void setNiveau(string& nomf)
+    void setNiveau(string& nomf);
+
+    int getNiveauCurent();
 };
 
 #endif // NIVEAU_H_INCLUDED

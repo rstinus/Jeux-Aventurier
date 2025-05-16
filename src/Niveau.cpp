@@ -32,6 +32,10 @@ Niveau::Niveau(Image& image, string nomf, Dictionnaire& dico) {
     _bonus = nbBonus();
 
     _nomFichier = nomf;
+
+    _image = image;
+
+    _niveauCurent = 1;
 }
 
 // Dessiner le décor
@@ -98,7 +102,7 @@ int Niveau::getBonus() {
     return _bonus;
 }
 
-void Niveau::setNiveau(string& nomf) {
+void Niveau::setNiveau(string& nomf, Dictionnaire& dico) {
     ifstream entree;
     entree.open(nomf);
     if (!(entree.is_open())) {
@@ -113,7 +117,7 @@ void Niveau::setNiveau(string& nomf) {
         int x;
         int y;
         entree >> nom >> x >> y;
-        Objet o(image, nom, dico, x*16, y*16);
+        Objet o(_image, nom, dico, x*16, y*16);
         _decor.push_back(o);
     }
     entree.close();
@@ -121,4 +125,10 @@ void Niveau::setNiveau(string& nomf) {
     _bonus = nbBonus();
 
     _nomFichier = nomf;
+
+    _niveauCurent++;
+}
+
+int Niveau::getNiveauCurent() {
+    return _niveauCurent;
 }
