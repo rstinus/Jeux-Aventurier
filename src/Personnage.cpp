@@ -204,3 +204,9 @@ void Personnage::mettreAjourAnimation() {
     }
     _frame++;
 }
+
+void Personnage::niveauSuivant(Niveau& niveau) {
+    if (_PersPosx == 112 && _PersPosy == 16 && niveau.getBonus() == 0) {
+        niveau.setnomf()
+    }
+}

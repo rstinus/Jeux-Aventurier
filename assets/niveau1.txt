@@ -93,7 +93,7 @@ Lit_bas 3 1
 Commode 5 1
 Commode 6 1
 Escaliers_haut 8 1
-Escaliers_bas 8 6
+Piedestal 8 6
 Fauteuil 4 3
 Table 4 4
 Tapis 5 6

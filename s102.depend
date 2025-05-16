@@ -87,3 +87,62 @@
 	"Tuile.h"
 	"Objet.h"
 
+1737452966 source:d:\perso\jeux-aventurier\src\dictionnaire.cpp
+	"Image.h"
+	<string>
+	"Moteur.h"
+	"Dictionnaire.h"
+	<vector>
+	<iostream>
+
+1737452966 source:d:\perso\jeux-aventurier\src\image.cpp
+	<SDL_image.h>
+	<exception>
+	"Image.h"
+
+1747382776 source:d:\perso\jeux-aventurier\src\main.cpp
+	<vector>
+	"Dictionnaire.h"
+	"Moteur.h"
+	"Image.h"
+	"Personnage.h"
+	"Objet.h"
+	"Niveau.h"
+
+1737454136 source:d:\perso\jeux-aventurier\src\moteur.cpp
+	<SDL_image.h>
+	"Moteur.h"
+
+1737452966 source:d:\perso\jeux-aventurier\src\niveau.cpp
+	"Image.h"
+	<string>
+	"Moteur.h"
+	"Dictionnaire.h"
+	<vector>
+	<iostream>
+	"Objet.h"
+	"Niveau.h"
+
+1737452966 source:d:\perso\jeux-aventurier\src\objet.cpp
+	"Image.h"
+	<string>
+	"Moteur.h"
+	"Dictionnaire.h"
+	<vector>
+	<iostream>
+	"Tuile.h"
+	"Objet.h"
+
+1737452966 source:d:\perso\jeux-aventurier\src\personnage.cpp
+	"Image.h"
+	"Personnage.h"
+	<string>
+	"Moteur.h"
+
+1737452966 source:d:\perso\jeux-aventurier\src\tuile.cpp
+	"Image.h"
+	<string>
+	"Moteur.h"
+	"Tuile.h"
+	<vector>
+

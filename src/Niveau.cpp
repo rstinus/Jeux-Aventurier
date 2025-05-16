@@ -30,6 +30,8 @@ Niveau::Niveau(Image& image, string nomf, Dictionnaire& dico) {
     entree.close();
 
     _bonus = nbBonus();
+
+    _nomFichier = nomf;
 }
 
 // Dessiner le décor
@@ -90,4 +92,33 @@ int Niveau::indiceObjet(int x, int y, string prop) {
         }
     }
     return -1;
+}
+
+int Niveau::getBonus() {
+    return _bonus;
+}
+
+void Niveau::setNiveau(string& nomf) {
+    ifstream entree;
+    entree.open(nomf);
+    if (!(entree.is_open())) {
+        throw string ("Dictionnaire.txt n'est pas ouvert");
+    }
+    int nbInt;
+    if (!(entree.eof())) {
+        entree >> nbInt;
+    }
+    for (int i=0; i<nbInt && !entree.eof(); i++) {
+        string nom;
+        int x;
+        int y;
+        entree >> nom >> x >> y;
+        Objet o(image, nom, dico, x*16, y*16);
+        _decor.push_back(o);
+    }
+    entree.close();
+
+    _bonus = nbBonus();
+
+    _nomFichier = nomf;
 }

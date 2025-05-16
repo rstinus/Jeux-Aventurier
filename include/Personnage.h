@@ -50,6 +50,8 @@ public:
     bool touche(Personnage& J);
 
     void mettreAjourAnimation();
+
+    void niveauSuivant(Niveau& niveau);
 };
 
 

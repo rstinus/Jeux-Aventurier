@@ -12,6 +12,7 @@ using namespace std;
 class Niveau {
     vector<Objet> _decor;
     int _bonus;
+    string nomFichier;
 public :
     Niveau(Image& image, string nomf, Dictionnaire& dico);
 
@@ -26,6 +27,10 @@ public :
     bool gagne();
 
     int indiceObjet(int x, int y, string prop);
+
+    int getBonus();
+
+    void setNiveau(string& nomf)
 };
 
 #endif // NIVEAU_H_INCLUDED
