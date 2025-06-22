@@ -25,6 +25,19 @@ Personnage::Personnage(Image player, int PersPosx, int PersPosy, int skin_x, int
     _animationY = skin_y;
 }
 
+Personnage::Personnage(Image player, int PersPosx, int PersPosy, int skin_x, int skin_y, char direction, Dictionnaire& dico) {
+    _player = player;
+    _PersPosx = PersPosx;
+    _PersPosy = PersPosy;
+    _skin_x = skin_x;
+    _skin_y = skin_y;
+    _direction = direction;
+    _player.selectionnerRectangle(_skin_x,_skin_y,16,16);
+    _animationX = skin_x;
+    _animationY = skin_y;
+    _dico = dico;
+}
+
 // Déssiné un personnage
 void Personnage::dessine() {
     _player.dessiner(_PersPosx, _PersPosy);
@@ -64,6 +77,7 @@ void Personnage::allerDroite(Niveau& niveau){
     if ((niveau.caseEtLibre(_PersPosx, _PersPosy) == false)){
         _PersPosx -= 16;
     }
+    std::cout<<_PersPosx << "   " << _PersPosy << endl;
     niveauSuivant(niveau);
 }
 
@@ -73,6 +87,7 @@ void Personnage::allerGauche(Niveau& niveau){
     if (niveau.caseEtLibre(_PersPosx, _PersPosy) == false){
         _PersPosx += 16;
     }
+    std::cout<<_PersPosx << "   " << _PersPosy << endl;
     niveauSuivant(niveau);
 }
 
@@ -82,6 +97,7 @@ void Personnage::allerBas(Niveau& niveau){
     if (niveau.caseEtLibre(_PersPosx, _PersPosy) == false){
         _PersPosy -= 16;
     }
+    std::cout<<_PersPosx << "   " << _PersPosy << endl;
     niveauSuivant(niveau);
 }
 
@@ -91,6 +107,7 @@ void Personnage::allerHaut(Niveau& niveau){
     if (niveau.caseEtLibre(_PersPosx, _PersPosy) == false){
         _PersPosy += 16;
     }
+    std::cout<<_PersPosx << "   " << _PersPosy << endl;
     niveauSuivant(niveau);
 }
 
@@ -210,11 +227,20 @@ void Personnage::mettreAjourAnimation() {
 }
 
 void Personnage::niveauSuivant(Niveau& niveau) {
-    if (_PersPosx == 112 && _PersPosy == 16 && niveau.getBonus() == 0) {
+    if (_PersPosx == 128 && _PersPosy == 16 && niveau.getBonus() == 0) {
         switch (niveau.getNiveauCurent()) {
-    case 1:
-        niveau.setNiveau("./assets/niveau2.txt",dico);
+        case 1:
+            niveau.chargerNiveau(2, _dico);
+            break;
+        case 2:
+            niveau.chargerNiveau(3, _dico);
+            break;
+        case 3:
+            niveau.chargerNiveau(4, _dico);
+            break;
+        case 4:
+            niveau.gagne();
+            break;
         }
-
     }
 }

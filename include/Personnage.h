@@ -21,11 +21,14 @@ private:
     int _frame;
     int _animationX;
     int _animationY;
+    Dictionnaire _dico;
 
 public:
     Personnage();
 
     Personnage(Image player, int PersPosx, int PersPosy, int skin_x, int skin_y, char direction);
+
+    Personnage(Image player, int PersPosx, int PersPosy, int skin_x, int skin_y, char direction, Dictionnaire& dico);
 
     void dessine();
 

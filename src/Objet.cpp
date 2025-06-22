@@ -45,3 +45,12 @@ int Objet::getY() const {
 void Objet::cache() {
     _prop = "cache";
 }
+
+bool Objet::estRamasse() const {
+    return _ramasse;
+}
+
+void Objet::ramasser() {
+    _ramasse = true;
+    cache();
+}

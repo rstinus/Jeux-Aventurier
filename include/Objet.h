@@ -15,6 +15,8 @@ class Objet {
     int _posY;
     int _ObjetX;
     int _ObjetY;
+    bool _ramasse = false;
+
 public :
     Objet (Image& image, string nom, Dictionnaire& dico, int posX, int posY);
     void dessiner();
@@ -22,6 +24,8 @@ public :
     int getX () const;
     int getY () const;
     void cache();
+    bool estRamasse() const;
+    void ramasser();
 };
 
 

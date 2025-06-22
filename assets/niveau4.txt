@@ -1,4 +1,4 @@
-101
+100
 Mur_pierres_4 0 0
 Mur_pierres_3 0 1
 Mur_pierres_3 0 2
@@ -99,4 +99,3 @@ Table 4 4
 Pot 5 6
 Pot 1 6
 Piece 2 1
-Piece 7 1

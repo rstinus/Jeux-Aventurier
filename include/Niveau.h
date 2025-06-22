@@ -11,6 +11,7 @@ using namespace std;
 
 class Niveau {
     vector<Objet> _decor;
+    vector<bool> _ramasses;
     int _bonus;
     int _niveauCurent;
     string _nomFichier;
@@ -33,9 +34,14 @@ public :
 
     int getBonus();
 
-    void setNiveau(string& nomf);
+    void setNiveau(const std::string& nomf, Dictionnaire& dico);
 
     int getNiveauCurent();
+
+    void setNiveauCurrent(const std::string& nomf);
+
+    void chargerNiveau(int numero, Dictionnaire& dico);
+
 };
 
 #endif // NIVEAU_H_INCLUDED

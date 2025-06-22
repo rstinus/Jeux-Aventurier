@@ -40,11 +40,11 @@ int main(int, char**) // Version special du main, ne pas modifier
     int ennemi1skin_y = 4;
     int ennemi2skin_x = 4;
     int ennemi2skin_y = 4;
-    Personnage Guerrier(skin,32,16,skin_x*16,skin_y*16,'H');
+    Dictionnaire dico;
+    Personnage Guerrier(skin,32,16,skin_x*16,skin_y*16,'H', dico);
     Personnage ennemi1(skin,5*16,16,ennemi1skin_x*16,ennemi1skin_y*16,'B');
     Personnage ennemi2(skin,16,5*16,ennemi2skin_x*16,ennemi2skin_y*16,'D');
-    Dictionnaire dico();
-    Niveau Niveau1(objet, "./assets/niveau1.txt", dico);
+    Niveau niveau(objet, "./assets/niveau1.txt", dico);
 
     bool quitter = false;
 
@@ -68,24 +68,24 @@ int main(int, char**) // Version special du main, ne pas modifier
             etatcoffre = !etatcoffre;
             break;*/
         case GAUCHE_APPUYE:
-            Niveau1.testerBonusEtPrendre(Guerrier.getPosx(), Guerrier.getPosy());
+            niveau.testerBonusEtPrendre(Guerrier.getPosx(), Guerrier.getPosy());
             Guerrier.mettreJourDirection('G');
-            Guerrier.allerGauche(Niveau1);
+            Guerrier.allerGauche(niveau);
             break;
         case DROITE_APPUYE:
-            Niveau1.testerBonusEtPrendre(Guerrier.getPosx(), Guerrier.getPosy());
+            niveau.testerBonusEtPrendre(Guerrier.getPosx(), Guerrier.getPosy());
             Guerrier.mettreJourDirection('D');
-            Guerrier.allerDroite(Niveau1);
+            Guerrier.allerDroite(niveau);
             break;
         case HAUT_APPUYE:
-            Niveau1.testerBonusEtPrendre(Guerrier.getPosx(), Guerrier.getPosy());
+            niveau.testerBonusEtPrendre(Guerrier.getPosx(), Guerrier.getPosy());
             Guerrier.mettreJourDirection('B');
-            Guerrier.allerHaut(Niveau1);
+            Guerrier.allerHaut(niveau);
             break;
         case BAS_APPUYE:
-            Niveau1.testerBonusEtPrendre(Guerrier.getPosx(), Guerrier.getPosy());
+            niveau.testerBonusEtPrendre(Guerrier.getPosx(), Guerrier.getPosy());
             Guerrier.mettreJourDirection('H');
-            Guerrier.allerBas(Niveau1);
+            Guerrier.allerBas(niveau);
             break;
         case ESPACE_APPUYE:
             quitter = true;
@@ -103,8 +103,8 @@ int main(int, char**) // Version special du main, ne pas modifier
 
     // TODO: faire bouger vos personnages, etc.
     if (moteur.animationsAmettreAjour() == true) {
-        ennemi1.avancer(Niveau1);
-        ennemi2.avancer(Niveau1);
+        ennemi1.avancer(niveau);
+        ennemi2.avancer(niveau);
         Guerrier.mettreAjourAnimation();
     }
 
@@ -114,7 +114,7 @@ int main(int, char**) // Version special du main, ne pas modifier
     moteur.initialiserRendu(); // efface ce qui avait ete affiche precedemment et reinitalise en ecran noir
 
     // TODO: afficher vos personnages, objets, etc.
-    Niveau1.dessiner();
+    niveau.dessiner();
     /*if (etatcoffre == false){
         coffref.dessiner(posx,posy);
     }
@@ -130,7 +130,7 @@ int main(int, char**) // Version special du main, ne pas modifier
         GameOver.dessiner(posxGO, posyGO);
         quitter = true;
     }
-    if (Niveau1.gagne() == true) {
+    if (niveau.gagne() == true) {
         //int posxB = LARGEUR_FENETRE/2-49.5;
         //int posyB = HAUTEUR_FENETRE/2-12;
         int posxB = LARGEUR_FENETRE/2-49.5;

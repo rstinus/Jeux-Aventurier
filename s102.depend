@@ -146,3 +146,63 @@
 	"Tuile.h"
 	<vector>
 
+1749122802 source:c:\users\ardel\documents\projet\jeux-aventurier\src\dictionnaire.cpp
+	"Image.h"
+	<string>
+	"Moteur.h"
+	"Dictionnaire.h"
+	<vector>
+	<iostream>
+
+1749122802 source:c:\users\ardel\documents\projet\jeux-aventurier\src\image.cpp
+	<SDL_image.h>
+	<exception>
+	"Image.h"
+
+1750627300 source:c:\users\ardel\documents\projet\jeux-aventurier\src\main.cpp
+	<vector>
+	"Dictionnaire.h"
+	"Moteur.h"
+	"Image.h"
+	"Personnage.h"
+	"Objet.h"
+	"Niveau.h"
+
+1750627926 source:c:\users\ardel\documents\projet\jeux-aventurier\src\moteur.cpp
+	<SDL_image.h>
+	"Moteur.h"
+
+1750627660 source:c:\users\ardel\documents\projet\jeux-aventurier\src\niveau.cpp
+	"Image.h"
+	<string>
+	"Moteur.h"
+	"Dictionnaire.h"
+	<vector>
+	<iostream>
+	"Objet.h"
+	"Niveau.h"
+	<regex>
+
+1750625806 source:c:\users\ardel\documents\projet\jeux-aventurier\src\objet.cpp
+	"Image.h"
+	<string>
+	"Moteur.h"
+	"Dictionnaire.h"
+	<vector>
+	<iostream>
+	"Tuile.h"
+	"Objet.h"
+
+1750627905 source:c:\users\ardel\documents\projet\jeux-aventurier\src\personnage.cpp
+	"Image.h"
+	"Personnage.h"
+	<string>
+	"Moteur.h"
+
+1749122802 source:c:\users\ardel\documents\projet\jeux-aventurier\src\tuile.cpp
+	"Image.h"
+	<string>
+	"Moteur.h"
+	"Tuile.h"
+	<vector>
+
