@@ -1,15 +1,5 @@
-séance 2 et 3:
-question fonctionnelle:1 jusqu'a 22
-question non fonctionnelle: toutes les questions ont été traité et fonctionnent.
+Si la difficulté est trop dure il faut changer la framerate dans moteur.cpp
 
-séance 4 et 5:
-question fonctionnelle:1 jusqu'a 25
-question non fonctionnelle: toutes les questions ont été traité et fonctionnent.
+Par défaut la framerate est à 8.
 
-
-Ils a été décider de créer un fichier h et cpp par class.
-
-Pour bouger il faut utiliser les flèches.
-
-
-PETAUD Stéphane et STINUS Rémy
+All right reserved to Rémy STINUS
